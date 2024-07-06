@@ -8,5 +8,4 @@ export interface IBoard {
 export interface IWinner {
   winner: PlayerType | null;
   positions: number[];
-  board: IBoard[];
 }

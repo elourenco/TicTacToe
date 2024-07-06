@@ -1,19 +1,24 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
   title: {
     fontSize: 20,
-    fontWeight: '500',
-    marginVertical: 30
+    fontWeight: "500",
+    marginVertical: 30,
   },
   playerX: {
-    color: 'blue',
+    color: "blue",
     fontSize: 24,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   playerO: {
-    color: 'green',
+    color: "green",
     fontSize: 24,
-    fontWeight: 'bold',
-  }
+    fontWeight: "bold",
+  },
+  winner: {
+    color: "gray",
+    fontSize: 24,
+    fontWeight: "bold",
+  },
 });

@@ -9,17 +9,21 @@ import HeaderTitle from "../../components/header-title";
 import type { IBoard } from "../../types/board";
 
 export default function GameBoard() {
-  const { winner, player, board, handleOnPress, handleResetOnPress } =
-    useGameBoard();
-
-  const keyExtractor = (item: IBoard) => item.position.toString();
+  const {
+    keyExtractor,
+    winner,
+    player,
+    board,
+    handleOnPress,
+    handleResetOnPress,
+  } = useGameBoard();
 
   const SquareItem = ({ item }: { item: IBoard }) => (
     <Square
       position={item.position}
       player={item.player}
       used={item.used}
-      winner={item.winner}
+      winner={Boolean(winner?.positions.includes(item.position))}
       onPress={handleOnPress}
     />
   );
